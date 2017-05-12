@@ -1,7 +1,5 @@
-en este archivo va el pdf y el link del archivo fuente en overleaf.
-
-https://www.overleaf.com/8947188gzyhjdrbsykb#/32053152/
-
+LAB 3
+LINK: https://www.overleaf.com/8947188gzyhjdrbsykb#/32053152/
 \documentclass[12pt]{article}
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
@@ -21,7 +19,7 @@ https://www.overleaf.com/8947188gzyhjdrbsykb#/32053152/
 \textsc{\Large Ingeniería civil informática y telecomunicaciones}\\[0.5cm]
 
 \HRule \\[0.4cm]
-{ \huge \bfseries Laboratorio Nº2}\\[0.4cm]
+{ \huge \bfseries Laboratorio Nº3}\\[0.4cm]
 { \huge \bfseries Redes de Datos}\\[0.4cm]
 \HRule \\[1cm]
  
@@ -52,60 +50,86 @@ José \textsc{Pérez}
 \end{titlepage}
 \section{ÍNDICE}
 
-2\ CUESTIONARIO E INVESTIGACIÓN --------------------------------PÁG 2-3\\
-2.1 DESCRIPCIÓN BREVE DE CATEGORÍAS DE CABLE UTP  - PÁG 2\\
-2.2 SITUACIONES DONDE SE DEBE USAR UN CABLE STP ---- PÁG 3\\
-5 CONCLUSIÓN ------------------------------------------------------------------ PÁG 3\\
-6 BIBLIOGRAFÍA ---------------------------------------------------------------- PÁG 4\\[3CM]
-IMAGEN 1: CABLE STP -------------------------------------------------------- PÁG 2\\[9CM]
+2\ ACTIVIDAD ----------------------------------------------------------------- PÁG 2-13\\
+2.1 DIRECCIÓN MAC DESTINO FF:FF:FF:FF:FF:FF  ------------- PÁG 2-7\\
+2.2 DIRECCIÓN MAC DESTINO OTRO EQUIPO ---------------- PÁG 8-12\\
+2.3 DIRECCIÓN MAC DESTINO EQUIPO FUERA DE RED ----- PÁG 13\\
+3\ CUESTIONARIO -------------------------------------------------------------- PÁG 14\\
+3.1 DIRECCIÓN MAC DESTINO FF:FF:FF:FF:FF:FF --------------- PÁG 14\\
+3.2 DIRECCIÓN MAC DESTINO OTRO EQUIPO -------------------- PÁG 14\\
+3.3 DIRECCIÓN MAC DESTINO EQUIPO FUERA DE RED ----- PÁG 14\\
+4\ CONCLUSIÓN ----------------------------------------------------------------- PÁG 15\\
+5\ BIBLIOGRAFÍA --------------------------------------------------------------- PÁG 15\\[2CM]
+IMAGEN 1: Wireshark del PC fuente: Mensaje enviado "Hola" ----- PÁG 2\\
+IMAGEN 2: Wireshark del PC fuente; Frame ----------------------------- PÁG 3\\
+IMAGEN 3: Wireshark del PC fuente; Ethernet II ---------------------- PÁG 4\\
+IMAGEN 4: Wireshark del PC fuente; Internet Protocol --------------- PÁG 5\\
+IMAGEN 5: Wireshark del PC fuente; Internet Control ---------------- PÁG 6\\
+IMAGEN 6: Wireshark del PC receptor ------------------------------------ PÁG 7\\
+IMAGEN 7: Wireshark del PC destino: Mensaje recibido "Hola" --- PÁG 8\\
+IMAGEN 8: Wireshark del PC destino; Frame ---------------------------- PÁG 9\\
+IMAGEN 9: Wireshark del PC destino; Linux cooked capture ------- PÁG 10\\
+IMAGEN 10: Wireshark del PC destino; Internet Protocol ----------- PÁG 11\\
+IMAGEN 11: Wireshark del PC destino; Internet Control ------------ PÁG 12\\
+IMAGEN 12: Wireshark del PC fuente ------------------------------------- PÁG 13\\
 
 
 
+\section{ACTIVIDAD}
 
-\section{CUESTIONARIO E INVESTIGACIÓN}
-\subsection{Descripción breve de categorías de cable UTP existentes}
-Cable UTP categoría 1:
+\subsection{Dirección MAC de destino FF:FF:FF:FF:FF:FF}
 
-Es un grado de cable UTP definido por el estándar TIA/EIA-568-B creado por la Electronic Industries Alliance (EIA) y la Telecommunications Industry Association (TIA). Aplicaciones:Líneas telefónicas y módem de banda ancha.\\
-Cable UTP categoría 2:
+\includegraphics{ff.png}
+(Imagen 1: Wireshark del PC fuente: Mensaje enviado "Hola")\\
+\includegraphics{fff.png}
+(Imagen 2: Wireshark del PC fuente; Frame)\\[1cm]
+\includegraphics{ffff.png}
+(Imagen 3: Wireshark del PC fuente; Ethernet II)\\[1cm]
+\includegraphics{fffff.png}
+(Imagen 4: Wireshark del PC fuente; Internet Protocol)\\[1cm]
+\includegraphics{ffffff.png}
+(Imagen 5: Wireshark del PC fuente; Internet Control Message Protocol)\\[1cm]
+\includegraphics{fr.png}
+(Imagen 6: Wireshark del PC receptor: al enviar al broadcast el mensaje lo reciben todos los PC de la red)\\[1cm]
 
-Tipo de cable de par trenzado no protegido definido por TIA/EIA-568-B. Es capaz de trasmitir datos hasta 4MBit/s. Aplicaciones: Cable para conexión de antiguos terminales como el IBM 3270.\\
-Cable UTP categoría 3:
+\subsection{Dirección MAC de destino otro equipo}
 
-Cable de par trenzadodiseñado para transportar fielmente data de hasta 10MBit/s, con un posible ancho de banda de 16 MHz. Aplicaciones: 10BASE-T and 100BASE-T4 Ethernet\\
-Cable UTP categoría 4:
+\includegraphics{g.png}
+(Imagen 7: Wireshark del PC destino: Mensaje recibido "Hola")\\[1cm]
+\includegraphics{gg.png}
+(Imagen 8: Wireshark del PC destino; Frame)\\[1cm]
+\includegraphics{ggg.png}
+(Imagen 9: Wireshark del PC destino; Linux cooked capture)\\[1cm]
+\includegraphics{gggg.png}
+(Imagen 10: Wireshark del PC destino; Internet Protocol)\\[1cm]
+\includegraphics{ggggg.png}
+(Imagen 11: Wireshark del PC destino; Internet Control Message Protocol y Monitoring Ethernet Trailer)\\[1cm]
 
-Es una descripción no estandarizada de cable que consiste en 4 cable UTP con una velocidad de datos de 16MBits/s y un rendimiento de 20 MHz. Aplicaciones: 16 Mbit/s Token Ring\\
-Cable UTP categoría 5:
+\subsection{Dirección MAC de destino otro equipo fuera de la red}
 
-Cable descrito en el estándar EIA/TIA-568-B el cual se utiliza para ejecutar CDDI y puede transmitir datos a velocidades de hasta 1000Mbps a frecuencia de hasta 100MHz.Aplicaciones:cat 5 10BASE-T y 100BASE-TX Ethernet, cat 5e 100BASE-TX y 1000BASE-T Ethernet\\
-Cable UTP categoría 6:
+\includegraphics{h.png}\\
+(Imagen 12: Wireshark del PC fuente)\\[9cm]
 
-Es un estándar de cables para Gigabit Ethernet y otros protocolos de redes que es retrocompatible con los estándares de cat 5/5e y cat 3. Aplicaciones: cat 6 1000BASE-T Ethernet, cat 6a 10GBASE-T Ethernet\\
-Cable UTP categoría 7:
+\section{CUESTIONARIO}
 
-Es un estándar de cable para Ethernet y otras tecnologías de interconexión que puede hacerse compatible hacia atrás con los tradicionales de ethernet actuales cat 5 y 6. Aplicaciones: cat 7a Para servicios de telefonía, Televisión por cable y Ethernet 1000BASE-T en el mismo cable.\\[0,5cm]
-\subsection{Situaciones donde se debe usar un cable STP}
-Es utilizado generalmente en las instalaciones de procesos de datos por su capacidad y sus buenas características contra las radiaciones electromanéticas, pero el inconveniente es que es un cable robusto, caro y difícil de instalar. Ejemplos de utilización. Se utiliza en redes de ordenadores como Ethernet o Token Ring.
- \\
+\subsection{¿Qué sucede cuando se envía un paquete a la dirección FF:FF:FF:FF:FF:FF? ¿Quiénes lo reciben? ¿Porqué?}
+  Al ser FF:FF:FF:FF:FF:FF la MAC broadcast el mensaje llega a cada computador de la red,ya que el switch busca la dirección en todos los PC conectados a la red, es la dirección de difusión de la red.  
+\subsection{¿Qué pasa cuando se envía un paquete a la MAC de otro equipo? ¿Quiénes lo pueden recibir? ¿Porqué?}
+   
+  Cuando se envía un paquete a una MAC, el computador que posee aquella MAC , podrá acceder a los datos del paquete. Para esto el PC envía el paquete al switch, este verifica entre los computadores de la red la MAC de destino, luego la envía a este.
 
+\subsection{¿Qué sucede si se envía un paquete a una MAC que no corresponda a ningún equipo de la red? ¿Quiénes lo pueden recepcionar? ¿Por qué?}
 
-\includegraphics{CABLESTP.jpg}\\
-(Imagen 1: Cable STP)\\[1cm]
-
-
-
+  Cuando se envía un paquete a una MAC de un PC no conectado a la red, no es recibido por ninguno, ya que el PC emisor envía el paquete al switch y este al no reconocer la MAC anula la operación.\\[9cm]
 
 \section{CONCLUSIÓN}
-Este laboratorio nos involucro más en el ambiente “técnica” de la red,  trabajando de una forma física el cable, aprendiendo más acerca de los cables UTP, sus normas (T568A y T 568B), el orden de los pines de los cables según su color en el conector, las diferencia entre un conector macho y conector hembra.Encontramos que  sin experiencia previa en el trabajo con cable se volvía un labor muy  complicado ya que se necesita una fuerza exacta para no romperlo cuando este es pelado, ya que son unos cables muy finos y delicados.Además la investigación nos ayudo a comprender las diferencias entre cada categoría de cable UTP y sus diferentes utilidades, como también las diferencias con el cable STP.
+Este laboratorio nos ayudó a comprender la utilización del software Scapy, el cual utilizamos para crear paquetes dentro de la red, y conocimos sus diferentes efectos dependiendo de la MAC de destino, esto nos sirvió para lograr comunicar computadores dentro de una misma red, enviando mensajes y comprender la utilidad de los protocolos del proceso, ademas logramos entender el software Wireshark, el cual nos ayudo a visualizar en pantalla la información enviada y recibida, con información detallada de esta.
 
 
 \section{BIBLIOGRAFÍA}
+Python\\
+Wireshark\\
+Scapy\\
           
--http://sincables.com.ve/v3/content/59-cable-utp-stp-y-ftp\\           
--https://es.slideshare.net/Arrucutundo/tipos-de-cables-utp\\
--portal.udp.cl/irj/portal material de redes de datos.\\ 
--Google imagenes: foto de cable STP\\
--Wikipedia: Cable de par trenzado\\
 
 \end{document}
