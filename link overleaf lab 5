@@ -1,0 +1,81 @@
+https://www.overleaf.com/8947188gzyhjdrbsykb#/32053152/
+
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\center 
+
+\textsc{\LARGE Universidad Diego Portales}\\[1cm]
+\textsc{\Large Ingeniería civil informática y telecomunicaciones}\\[0.5cm]
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Laboratorio Nº5}\\[0.4cm]
+{ \huge \bfseries Redes de Datos}\\[0.4cm]
+\HRule \\[1cm]
+ 
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+Sebastian \textsc{Diaz}\\
+\textsc{Daniel Utreras}
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Ayudante:} \\
+Alexis \textsc{Inzunza} 
+\emph{Profesor:} \\
+José \textsc{Pérez}
+\end{flushright}
+\end{minipage}\\[1cm]
+
+\includegraphics{seminarios-de-fisica-de-la-universidad-diego-portales.jpg}\\[1cm] 
+{\large \today}\\[2cm]
+ 
+
+\vfill
+
+\end{titlepage}
+\section{ÍNDICE}
+
+2\ ACTIVIDAD --------------------------------------------------------------------- PÁG 2\\
+2.1 RUTEO ESTÁTICO  --------------------------------------------------------- PÁG 2\\
+2.2 RUTEO DINÁMICO -------------------------------------------------------- PÁG 2\\
+3\ CONCLUSIÓN ------------------------------------------------------------------ PÁG 3\\
+4\ BIBLIOGRAFÍA ----------------------------------------------------------------- PÁG 3\\[15CM]
+
+
+
+\section{ACTIVIDAD}
+
+\subsection{Ruteo estático}
+
+En primer lugar para lograr realizar esta actividad, comenzamos con la topología de red, en este caso usando 8 PC genéricos, 4 Switchers2950-24 y 4 Routers 2620XM. Luego agregamos un WIC-2T a cada Router para la conexión de los serials, y configuramos las IPs , Mask y Gateway de cada PC, hacemos lo mismo con el Router,y configuramos las IPs de las serials. Cuando tenemos todas las IPs configuradas tanto de los PCs como de los routers, comenzamos con el ruteo estático, para ello mediante comandos en CLI en cada router agregamos la dirección tanto IP como Mask de cada red del router más cercano, ademas de sus respectivas IP de serial conectado, logrando la conexión entre los routers, luego de una prueba de este,se verifico que funciona luego de 2 0 3 minutos de abierto el programa.
+
+\subsection{Ruteo dinámico}
+
+Al igual que en el ruteo estático para realizar la actividad , se utilizo exactamente la misma topología de red (8 PC genéricos, 4 Switchers2950-24 y 4 Routers 2620XM) , después de configurar las IP y Mask de tanto PC como routers y conformar las serials se comienza con el ruteo dinámico. Para esto se configura cada router mediante comandos de CLI el protocolo "RIP" en su versión 2, y a través del comando "network"se ingresa la IP que este conectada directamente al router, siendo este el caso los 2 PC que se conectan mediante el switch y los 2 router(uno a cada lado) que lo rodea. Después de esto se debe salir con el comando "exit" y se guardara todo mediante "copy running-config startup-config".\\[5CM]  
+
+\section{CONCLUSIÓN}
+Este laboratorio nos ayudó a conocer más acerca del enrutamiento de redes, un metodo necesario para que diferentes redes interactuen entre ellas, mediante el uso de Packer tracer logramos entender mejor los procedimientos para una efectiva configuración de esta.Además aprendimos la diferencia entre 2 tipos de enrutamiento, Estático y Dinámico y sus respectivas configuraciones.
+
+
+\section{BIBLIOGRAFÍA}
+PACKET TRACER.\\
+Material disponible Portal.udp.cl redes de datos.\\
+Wikipedia.\\
+          
+
+\end{document}
