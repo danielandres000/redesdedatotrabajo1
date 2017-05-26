@@ -1,0 +1,172 @@
+https://www.overleaf.com/8947188gzyhjdrbsykb#/32053152/
+
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\center 
+
+\textsc{\LARGE Universidad Diego Portales}\\[1cm]
+\textsc{\Large Ingeniería civil informática y telecomunicaciones}\\[0.5cm]
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Laboratorio Nº4}\\[0.4cm]
+{ \huge \bfseries Redes de Datos}\\[0.4cm]
+\HRule \\[1cm]
+ 
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+Sebastian \textsc{Diaz}\\
+\textsc{Daniel Utreras}
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Ayudante:} \\
+Alexis \textsc{Inzunza} 
+\emph{Profesor:} \\
+José \textsc{Pérez}
+\end{flushright}
+\end{minipage}\\[1cm]
+
+\includegraphics{seminarios-de-fisica-de-la-universidad-diego-portales.jpg}\\[1cm] 
+{\large \today}\\[2cm]
+ 
+
+\vfill
+
+\end{titlepage}
+\section{ÍNDICE}
+
+2\ ACTIVIDAD 1 ---------------------------------------------------------------- PÁG 2-3\\
+2.1 Desactivar STP para una VLAN  ----------------------------------------- PÁG 2\\
+2.2 Activar STP para una VLAN --------------------------------------------- PÁG 3\\
+3\ ACTIVIDAD 2 ---------------------------------------------------------------- PÁG 4-5\\
+4\ ACTIVIDAD 3 ---------------------------------------------------------------- PÁG 6-7\\
+5\ ACTIVIDAD 4 ---------------------------------------------------------------- PÁG 8-9\\
+5.1 MODO TRUNK -------------------------------------------------------------- PÁG 8\\
+5.2 MODO ACCESS -------------------------------------------------------------- PÁG 9\\
+6\ PREGUNTAS PROPUESTAS ----------------------------------------- PÁG 10-15\\
+6.1 A (ACTIVIDAD 1:STP DESACTIVADO)----------------------------- PÁG 10\\
+6.2 B (ACTIVIDAD 1:STP DESACTIVADO) ----------------------------- PÁG 10\\
+6.3 A (ACTIVIDAD 1:STP ACTIVADO) ---------------------------------- PÁG 11\\
+6.4 B (ACTIVIDAD 1:STP ACTIVADO) ---------------------------------- PÁG 11\\
+6.5 C (ACTIVIDAD 2)  ---------------------------------------------------------- PÁG 12\\
+6.6 D (ACTIVIDAD 2) ----------------------------------------------------- PÁG 12-13\\
+6.7 E (ACTIVIDAD 4) ---------------------------------------------------------- PÁG 14\\
+6.8 F (ACTIVIDAD 4) ----------------------------------------------------------- PÁG 14\\
+7\ CONCLUSIÓN ----------------------------------------------------------------- PÁG 15\\
+8\ BIBLIOGRAFÍA -------------------------------------------------------------- PÁG 15\\[1cm]
+1 IMAGEN 1: Desactivar STP ------------------------------------------------- PÁG 2\\
+2 IMAGEN 2: Activar STP ----------------------------------------------------- PÁG 3\\
+3 IMAGEN 3: switch primario ------------------------------------------------- PÁG 4\\
+4 IMAGEN 4: Switch secundario --------------------------------------------- PÁG 5\\
+5 IMAGEN 5: Configuración Priorización ---------------------------------- PÁG 6\\
+6 IMAGEN 6: Ruta del mensaje ---------------------------------------------- PÁG 7\\
+7 IMAGEN 7: Modo Trunk ---------------------------------------------------- PÁG 8\\
+8 IMAGEN 8: Modo Access ---------------------------------------------------- PÁG 9\\
+9 IMAGEN 9: STP descativado --------------------------------------------- PÁG 10\\
+10 IMAGEN 10: STP activado ----------------------------------------------- PÁG 11\\
+11 IMAGEN 11: Primary y Secondary ------------------------------------- PÁG 13\\
+12 IMAGEN 12: Priorizacion en STP -------------------------------------- PÁG 13\\
+
+
+\section{ACTIVIDAD 1:TOPOLOGÍA BASE CON BUCLES}
+
+\subsection{Desactivar STP para una VLAN}
+\includegraphics{cli_actividad_1_desactivar.png}
+
+(IMAGEN 1: Desactivar STP)
+\subsection{Activar STP para una VLAN}
+\includegraphics{cli_actividad_1_activar.png}
+
+(IMAGEN 2: Activar STP)
+
+\section{ACTIVIDAD 2:CONFIGURACIÓN DE STP}
+\includegraphics{cli_actividad_2_primary.png}\\ (IMAGEN 3:Configuración switch primario)\\
+\includegraphics{cli_actividad_2_secondary.png}
+
+(IMAGEN 4:Configuración switch secundario)
+
+\section{ACTIVIDAD 3:PRIORIZACIÓN EN STP}
+
+\includegraphics{cli_actividad_3.png}\\[1cm]
+\\ (IMAGEN 5:Configuración Priorización)\\
+\includegraphics{redes_actividad_3} \\ (IMAGEN 6:Ruta del mensaje para llegar a destino)
+
+\section{ACTIVIDAD 4:CONFIGURACIÓN VLAN}
+\subsection{Modo Trunck}
+\includegraphics{cli_actividad_4.png} \\ (IMAGEN 7: Comando CLI Modo Trunk)
+
+\subsection{Modo Access}
+
+\includegraphics{cli_actividad_4_1.png} \\ (IMAGEN 8: Comando CLI Modo Access)\\[3cm]
+
+\section{PREGUNTAS PROPUESTAS}
+\subsection{¿Qué camino realizara un paquete para llegar desde el switch 0 hasta el switch2?(ACTIVIDAD 1:STP DESACTIVADO)}
+
+El switch 0 enviara un paquete tanto al switch 1 como al switch 2 , después se reenviara el paquete entre ambos , es decir el switch 1 le enviara el paquete al switch 2 y viceversa, para posteriormente cada switch le enviara de vuelta el paquete al switch 0. Esto se repetirá infinitamente generando un “BUCLE”, este bucle no permitirá que el paquete llegue al destino del host.
+
+
+\subsection{¿Qué camino realizara un paquete para llegar desde el switch 2 hasta el switch1?(ACTIVIDAD 1:STP DESACTIVADO)}
+
+Es prácticamente los mismo que el caso anterior, se genera bucle en el sistema redirección ando entre los switches infinitamente el paquete.
+
+\includegraphics{redes_actividad_1_desactivado.png}\\ (IMAGEN 9: Topologia con el STP Desactivado)\\[3cm]
+
+\subsection{¿Qué camino realizara un paquete para llegar desde el switch 0 hasta el switch2?(ACTIVIDAD 1:STP ACTIVADO)}
+
+El switch 0 enviara un único paquete al switch 2 , recibirá el paquete  el host que está vinculado con el switch 2  y reenviara el paquete al switch 0 , y posteriormente al host vinculado al switch 0 , produciéndose con éxito el envio (successful).
+
+\subsection{¿Qué camino realizara un paquete para llegar desde el switch 2 hasta el switch1?(ACTIVIDAD 1:STP ACTIVADO)}
+
+El switch 2 enviara un único paquete al switch 1 , recibirá el paquete  el host que está vinculado con el switch 1  y reenviara el paquete al switch 2 , y posteriormente al host vinculado al switch 2 , produciéndose con éxito el envió (successful).
+
+\includegraphics{redes_actividad_1_activado.png}\\(IMAGEN 10: Topologia con el STP Activado)\\[3cm]
+
+\subsection{¿Qué camino realizara un paquete para llegar desde el switch 2 hasta el switch0? (ACTIVIDAD 2)}
+
+Switch 1: primary.\\
+Switch 0-2:secondary.\\
+Para que funcione el envió de paquetes es necesario que este pase por el switch primario.\\
+Secuencia del paquete:\\
+Switch 2 – switch1-switch0-switch1-switch2-switch1.\\
+Al llegar nuevamente al switch1 este enviara el paquete a ambos switches.
+
+\subsection{¿Qué camino realizara un paquete para llegar desde el switch 1 hasta el switch0? (ACTIVIDAD 2)}
+
+Switch 1: primary.\\
+Switch 0-2:secondary.\\
+El switch1 enviara paquetes al switch 0 y al switch2 , al verificar la IP el switch0 le reenviara el paquete al switch1, para posteriormente volver a enviarle el paquete al switch0.
+
+\includegraphics{redes_actividad_2}\\(IMAGEN 11: Topologia 2. Primary y Secondary)\\[1cm] 
+
+\includegraphics{redes_actividad_3}\\(IMAGEN 12: Topologia 3. Priorizacion en STP)\\[1cm] 
+
+\subsection{¿Cual es la diferencia del modo Access y el modo Trunk en un switch?}
+ Los puertos de acceso solo  transportan tráfico de una sola vlan en cambio un puerto trunk puede transportar trafico de múltiples vlans, por lo que, podemos tener múltiples vlans en los switches.
+\subsection{¿Que ocurre si conecto una puerta en modo Trunk a un PC?}
+El PC conectado a esa puerta, se vincula a las respestivas VLAN que fueron agregadas a la Trunk, puede recibir y enviar paquetes a los PCs que pertenezcan a las VLAN vinculadas a esta\\[10cm] 
+
+
+\section{CONCLUSIÓN}
+En esta actividad hemos podido ejercitar más en actividades relacionadas con redes, con el uso de packet tracer, al crear diferentes topologías y experimentar con el funcionamiento del protocolo STP, asignar switch primarios y secundarios y la diferencia en el envio del mensaje que provaca el cambio de estas, asignar prioridades a los switch viendo los efectos que prova cambiar estos y configuración de redes VLAN con dos metodos diferentes Trunk y Access.
+\section{BIBLIOGRAFÍA}
+PACKET TRACER.\\
+Material disponible Portal.udp.cl redes de datos.\\
+Wikipedia.\\
+          
+
+\end{document}
