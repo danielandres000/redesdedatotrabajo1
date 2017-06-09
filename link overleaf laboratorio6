@@ -1,0 +1,106 @@
+https://www.overleaf.com/8947188gzyhjdrbsykb#/32053152/
+
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\center 
+
+\textsc{\LARGE Universidad Diego Portales}\\[1cm]
+\textsc{\Large Ingeniería civil informática y telecomunicaciones}\\[0.5cm]
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Laboratorio Nº6}\\[0.4cm]
+{ \huge \bfseries Redes de Datos}\\[0.4cm]
+\HRule \\[1cm]
+ 
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+Sebastian \textsc{Diaz}\\
+\textsc{Daniel Utreras}
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Ayudante:} \\
+Alexis \textsc{Inzunza} 
+\emph{Profesor:} \\
+José \textsc{Pérez}
+\end{flushright}
+\end{minipage}\\[1cm]
+
+\includegraphics{seminarios-de-fisica-de-la-universidad-diego-portales.jpg}\\[1cm] 
+{\large \today}\\[2cm]
+ 
+
+\vfill
+
+\end{titlepage}
+\section{ÍNDICE}
+
+2\ ACTIVIDAD 1 ----------------------------------------------------------------- PÁG 2-6\\
+3\ ACTIVIDAD 2 ------------------------------------------------------------------ PÁG 7\\
+6\ PREGUNTAS PROPUESTAS ----------------------------------------- PÁG 10-15\\
+6.1 ----------------------------- PÁG 10\\
+6.2  ----------------------------- PÁG 10\\
+6.3  ---------------------------------- PÁG 11\\
+6.4  ---------------------------------- PÁG 11\\
+7\ CONCLUSIÓN ----------------------------------------------------------------- PÁG 15\\
+8\ BIBLIOGRAFÍA -------------------------------------------------------------- PÁG 15\\[1cm]
+1 IMAGEN 1: Codigo cliente ------------------------------------------------ PÁG 2\\
+2 IMAGEN 2: Codigo servidor -------------------------------------------------- PÁG 3\\
+3 IMAGEN 3: Cliente 1 --------------------------------------------------------- PÁG 4\\
+4 IMAGEN 4: Cliente 2 --------------------------------------------------------- PÁG 5\\
+5 IMAGEN 5: Servidor ----------------------------------------------------------- PÁG 6\\
+6 IMAGEN 6: Wireshark -------------------------------------------------------- PÁG 7\\
+
+
+
+\section{ACTIVIDAD 1}
+
+\includegraphics{clientee.png}
+(IMAGEN 1: Codigo cliente)\\
+\includegraphics{servidor.png}
+(IMAGEN 2: Codigo servidor)\\
+\includegraphics{cliente1.png}
+(IMAGEN 3: Cliente 1)\\
+\includegraphics{cliente2.png}
+(IMAGEN 4: Cliente 2)\\
+\includegraphics{servidorr.png}
+(IMAGEN 5: Servidor)\\
+\section{ACTIVIDAD 2}
+\includegraphics{wireshark.png}
+(IMAGEN 6:Wireshark con el mensaje "trabajo laboratorio 6")
+
+\section{PREGUNTAS PROPUESTAS}
+\subsection{Explique el funcionamiento del envió y recepción de información para su algoritmo, respondiendo las interrogantes ¿Que se envía?¿Como se envía?}
+Se envia información, el envió y recepción de esto funciona mediante un numero de secuencias,  primero creamos un sockets para instanciarlo, siguiendo con un bind para configurar las direcciones y el puerto, luego configuramos el número de conexiones usando listen y creamos 2 funciones de envío y recepción , finalizando con un ciclo el cual espera un mensaje para iniciar el chat.
+\subsection{¿Porque el puerto que muestra el servidor al generar la conexión no es el mismo que el escrito en el algoritmo del cliente?}
+
+
+\subsection{Si usted tuviese que realizar un videojuego con soporte multijugador utilizando sockets ¿Que protocolo se utilizaría?¿Porque?}
+            El protocolo UDP sería un protocolo más adecuado para un videojuego, ya que el TCP es para funciones que exigen un nivel de transporte, detección y corrección de errores fiables, produciendo que tenga una ejecución más lenta y pesada, en cambio UDP al ser más ligero con el transporte, el videojuego correría a mayor velocidad y así evitando que en su desarrollo ocurran bucles o fallas, y en esta reaccionar rápido.
+\subsection{¿Se puede utilizar cualquier numero de puerto para cualquier aplicación?}
+Los puertos se dividen en 3 secciones: puertos bien conocidos (0-1024), puertos registrados (1024-49151) y puertos dinámicos o privados (49152-65535aprox).  Los dos primeros se le asignaran para ser utilizados en aplicaciones y el sistema operativo, dejando los puertos dinámicos para clientes.
+
+\section{CONCLUSIÓN}
+
+En este laboratorio comprendimos que función cumplen los sockets, método para el intercambio de información entre un cliente y un servidor, ademas de sus protocolos. Logramos establecer conexión en un servidor, mediante dos clientes utilizando python y estudiar y comprender su funcionamiento usando Wireshark.
+\section{BIBLIOGRAFÍA}
+Wikipedia
+
+          
+
+\end{document}
